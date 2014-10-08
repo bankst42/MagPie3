@@ -9,7 +9,7 @@ public class StringExplorer
 
 	public static void main(String[] args)
 	{
-		String sample = "The quick brown fox jumped over the lazy dog.";
+		String sample = "The slow brown fox jumped over the lazy dog.";
 		
 		//  Demonstrate the indexOf method.
 		int position = sample.indexOf("quick");
@@ -22,8 +22,11 @@ public class StringExplorer
 
 		//  Try other methods here:
         int notFoundPsn = sample.indexOf("slow");
+        int notFoundPsn2 = sample.indexOf("slow", 5);
         System.out.println("sample.indexOf(\"slow\") = " + notFoundPsn);
+        System.out.println("sample.indexOf(\"slow\") = " + notFoundPsn2);
 
-	}
+
+    }
 
 }
