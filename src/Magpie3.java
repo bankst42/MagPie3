@@ -29,6 +29,8 @@ public class Magpie3
 	 */
 	public String getResponse(String statement)
 	{
+        findKeyword("I can't catch wild cats.", "cat", 0);
+
 		String response = "";
 		if (statement.length() == 0)
 		{
@@ -45,6 +47,10 @@ public class Magpie3
 		{
 			response = "Tell me more about your family.";
 		}
+        else if (findKeyword(statement, "cat") >= 0)
+        {
+            response = "Tell me more about your pets.";
+        }
 		else
 		{
 			response = getRandomResponse();
